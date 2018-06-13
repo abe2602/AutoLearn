@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VibraActivity">
+    tools:context=".Vibra.VibraActivity">
 
 </android.support.constraint.ConstraintLayout>

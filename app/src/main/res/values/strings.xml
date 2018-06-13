@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Mobile Trabalho</string>
+    <string name="sadButton">Tristeza</string>
+    <string name="happyButton">Felicidade</string>
+    <string name="angryButton">Raiva</string>
+    <string name="afraidButton">Medo</string>
+    <string name="disgustedButton">Nojo</string>
+    <string name="talkButton">Click para falar</string>
+    <string name="auxTextView">Temporário</string>
 </resources>
