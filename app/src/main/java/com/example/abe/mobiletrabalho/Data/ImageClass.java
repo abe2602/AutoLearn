@@ -12,14 +12,22 @@ public class ImageClass {
     @ColumnInfo(name = "_id")
     public long id; //PK
 
-    @ColumnInfo(typeAffinity = ColumnInfo.BLOB)
-    private byte[] image; // A imagem em si
-
+    @ColumnInfo(name = "description")
     private String description; //Saber qual é a descrição dela (Leão, Macaco, feliz, etc)
+    @ColumnInfo(name = "type")
     private String type; //Saber de qual classe ela vem
+    @ColumnInfo(name = "name")
+    private String name; //Saber de qual classe ela vem
 
-    public ImageClass(byte[] image, String description, String type){
-        this.image = image;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ImageClass(String name, String description, String type){
         this.description = description;
         this.type = type;
     }
@@ -30,14 +38,6 @@ public class ImageClass {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public byte[] getImage() {
-        return image;
-    }
-
-    public void setImage(byte[] image) {
-        this.image = image;
     }
 
     public String getDescription() {

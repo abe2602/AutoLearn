@@ -23,6 +23,6 @@ public interface DAOImage {
     void updateImage(ImageClass image);
 
     //Pega todas as imagens por tipo, então, a partir do tipo e descrição (que é única na nossa base), adquirir o ID
-    @Query("delete from imageclass where _id = :id")
-    void deleteImages(long id);
+    @Query("delete from imageclass")
+    void deleteAll();
 }

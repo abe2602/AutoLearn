@@ -2,10 +2,13 @@ package com.example.abe.mobiletrabalho.Emotions;
 
 import android.widget.ImageView;
 
+import com.example.abe.mobiletrabalho.Data.imageDatabase;
+
 public class Emotions {
     private ImageView imageFeeling;
     private String correctFeeling;
     private boolean correct;
+    private imageDatabase database;
 
     public boolean isCorrect() {
         return correct;
