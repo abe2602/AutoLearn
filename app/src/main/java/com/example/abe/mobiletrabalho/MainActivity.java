@@ -1,27 +1,18 @@
 package com.example.abe.mobiletrabalho;
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
 
-import com.example.abe.mobiletrabalho.Camera.CameraActivity;
-import com.example.abe.mobiletrabalho.Danger.DangerActivity;
+import com.example.abe.mobiletrabalho.camera.CameraActivity;
+import com.example.abe.mobiletrabalho.danger.DangerActivity;
 import com.example.abe.mobiletrabalho.Data.ImageClass;
 import com.example.abe.mobiletrabalho.Data.imageDatabase;
-import com.example.abe.mobiletrabalho.Emotions.EmotionsActivity;
-import com.example.abe.mobiletrabalho.Map.MapActivity;
-import com.example.abe.mobiletrabalho.Mic.MicActivity;
-import com.example.abe.mobiletrabalho.Vibra.VibraActivity;
-
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.util.List;
+import com.example.abe.mobiletrabalho.emotions.EmotionsActivity;
+import com.example.abe.mobiletrabalho.map.MapActivity;
+import com.example.abe.mobiletrabalho.mic.MicActivity;
+import com.example.abe.mobiletrabalho.vibra.VibraActivity;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.abe.mobiletrabalho.Danger;
+package com.example.abe.mobiletrabalho.danger;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -22,7 +22,7 @@ public abstract class imageDatabase extends RoomDatabase{
         return INSTANCE;
     }
 
-    public static void destroyInstance(){
+    /*public static void destroyInstance(){
         INSTANCE = null;
-    }
+    }*/
 }

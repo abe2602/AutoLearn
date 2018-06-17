@@ -1,10 +1,25 @@
 <resources>
     <string name="app_name">Mobile Trabalho</string>
+
     <string name="sadButton">Tristeza</string>
     <string name="happyButton">Felicidade</string>
     <string name="angryButton">Raiva</string>
     <string name="afraidButton">Medo</string>
     <string name="disgustedButton">Nojo</string>
+
     <string name="talkButton">Click para falar</string>
     <string name="auxTextView">Temporário</string>
+
+    <string name="musicNameRain">Chuva</string>
+    <string name="musicNameWind">Vento</string>
+    <string name="musicNamePiano">Piano</string>
+    <string name="musicNameLeaf">Folhas</string>
+    <string name="musicVibra">Vibração</string>
+    <string name="tocarString">Tocar</string>
+    <string name="pararString">Pausar</string>
+    <string name="titleVibra">Escolha uma das músicas para descansar e relaxar!</string>
+    <string name="empty"> </string>
+
+    <string name="contentImageAnimal">Imagem de um animal</string>
+
 </resources>

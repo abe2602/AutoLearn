@@ -1,4 +1,4 @@
-package com.example.abe.mobiletrabalho.Map;
+package com.example.abe.mobiletrabalho.map;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.example.abe.mobiletrabalho.Camera;
+package com.example.abe.mobiletrabalho.camera;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
