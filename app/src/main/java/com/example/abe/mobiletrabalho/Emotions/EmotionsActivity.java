@@ -30,14 +30,14 @@ public class EmotionsActivity extends AppCompatActivity {
         imageViewEmotions = (ImageView)findViewById(R.id.emotion_image_view);
 
         this.populateDataBase();
-
-        Random imagePosition = new Random();
-        int position = imagePosition.nextInt(15);
         List<ImageClass> imageList = database.imageDao().getAllImagesByType("emotion");
+        Random imagePosition = new Random();
+        int position = imagePosition.nextInt(imageList.size());
+
 
         final String str = "emotion_image"+position;
 
-        Log.d("Emotion", imageList.get(position).getDescription());
+        Log.d("lugar", String.valueOf(position));
 
         imageViewEmotions.setImageDrawable(
                         getResources().getDrawable(getResourceID(str, "drawable", getApplicationContext())));

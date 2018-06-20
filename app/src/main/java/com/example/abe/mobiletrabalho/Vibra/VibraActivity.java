@@ -38,9 +38,9 @@ public class VibraActivity extends AppCompatActivity {
         auxCheck2 = true;
         auxCheck3 = true;
 
-        on1 = findViewById(R.id.switch_music_1);
-        on2 = findViewById(R.id.switch_music_2);
-        on3 = findViewById(R.id.switch_music_3);
+        on1 = (Switch) findViewById(R.id.switch_music_1);
+        on2 =(Switch) findViewById(R.id.switch_music_2);
+        on3 = (Switch)findViewById(R.id.switch_music_3);
 
         on1.setChecked(false);
         on2.setChecked(false);
