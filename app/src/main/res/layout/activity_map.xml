@@ -4,6 +4,126 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".map.MapActivity">
+    android:orientation="vertical"
+    android:stretchMode="columnWidth" >
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/dragLayout"
+        android:layout_width="match_parent"
+        android:layout_height="161dp"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgMap0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="128dp"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="16dp"
+            android:maxHeight="35dp"
+            android:maxWidth="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/animal_image0" />
+
+        <ImageView
+            android:id="@+id/imgMap1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:maxHeight="35dp"
+            android:maxWidth="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/animal_image2" />
+
+        <ImageView
+            android:id="@+id/imgMap2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="256dp"
+            android:layout_marginStart="256dp"
+            android:layout_marginTop="16dp"
+            android:maxHeight="35dp"
+            android:maxWidth="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/animal_image3" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drop0"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorYellow"
+        app:layout_constraintTop_toBottomOf="@+id/dragLayout"
+        tools:layout_editor_absoluteX="0dp" >
+
+        <TextView
+            android:id="@+id/firstSeq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/one"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="15dp" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drop1"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:background="@color/colorLightBlue"
+        app:layout_constraintTop_toBottomOf="@+id/drop0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/secondSeq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/two"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="13dp"
+            tools:layout_editor_absoluteY="10dp" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/drop2"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:background="@color/colorGreen"
+        app:layout_constraintTop_toBottomOf="@+id/drop1"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/thirdSeq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/third"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="13dp"
+            tools:layout_editor_absoluteY="15dp" />
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/nextButtonSeq"
+        android:layout_width="104dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/nextSeq"
+        android:onClick="nextOnClickSeq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.916"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,16 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutRecyclerView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/itens_list"
-        style="@style/TextAppearance.AppCompat.Title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical|start"
-        android:textSize="30sp"
-        android:fontFamily="cursive" />
+    <ImageView
+        android:id="@+id/imageDanger"
+        android:layout_width="98dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/dangerText"
+        app:layout_constraintEnd_toStartOf="@+id/textViewSeguro"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toEndOf="@+id/textViewPerigoso"
+        tools:layout_editor_absoluteY="16dp" />
 
+    <TextView
+        android:id="@+id/textViewObjctName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/empty"
+        app:layout_constraintEnd_toEndOf="@+id/imageDanger"
+        app:layout_constraintStart_toStartOf="@+id/imageDanger"
+        app:layout_constraintTop_toBottomOf="@+id/imageDanger" />
+
+    <TextView
+        android:id="@+id/textViewPerigoso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="56dp"
+        android:background="@color/colorLightRed"
+        android:text="@string/dangerText"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSeguro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="56dp"
+        android:background="@color/colorGreen"
+        android:text="@string/secureText"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorLightBlue"
+        app:layout_constraintTop_toBottomOf="@+id/textViewObjctName"
+        tools:layout_editor_absoluteX="0dp" />
 </android.support.constraint.ConstraintLayout>

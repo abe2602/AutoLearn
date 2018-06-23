@@ -2,6 +2,7 @@ package com.example.abe.mobiletrabalho.mic;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.SystemClock;
 import android.speech.RecognizerIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,6 +26,7 @@ public class MicActivity extends AppCompatActivity {
     private ImageView showPhoto;
     private ImageClass choosen;
     private final int REQ_CODE_SPEECH_OUTPUT = 143;
+    private List<ImageClass> imageList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,17 +36,16 @@ public class MicActivity extends AppCompatActivity {
 
         showText = (TextView) findViewById(R.id.auxTextView);
         showPhoto = (ImageView) findViewById(R.id.mic_image_view);
+        imageList = databaseMic.imageDao().getAllImagesByType("animal");
 
-        this.populateDataBase();
+        if(imageList.size() == 0){
+            this.populateDataBase();
+            imageList = databaseMic.imageDao().getAllImagesByType("animal");
+        }
 
-        List<ImageClass> imageList = databaseMic.imageDao().getAllImagesByType("animal");
         Random imagePosition = new Random();
         int position = imagePosition.nextInt(imageList.size());
-
-        Log.d("Position", String.valueOf(position));
-
         String str = "animal_image" + String.valueOf(position);
-
         setChoosen(imageList.get(position));
 
         showPhoto.setImageDrawable(
@@ -151,19 +152,26 @@ public class MicActivity extends AppCompatActivity {
             case REQ_CODE_SPEECH_OUTPUT:{
                 if(resultCode == RESULT_OK && data != null){
                     ArrayList<String> voiceIntent = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS); //Pega os textos
-                    //showText.setText(voiceIntent.get(0)); //Coloca o texto na textView
-
                     String talkedString = getChoosen().getDescription();
-
-                  //  Log.d("HUEHUEHUEUHEHUHEU ", talkedString);
                     String micString = Normalizer.normalize(voiceIntent.get(0), Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]",  "");
                     String minString = micString.toLowerCase();
 
-                    Log.d("HUEHUEHUEUHEHUHEU ", minString);
-                    Log.d("HUEHUEHUEUHEHUHEU ", talkedString);
-
                     if(talkedString.equals(minString)){
-                        showText.setText("ACERTOU!"); //Coloca o texto na textView
+                        showText.setText("Parabéns, você acertou!!!");
+                        SystemClock.sleep(7000);
+
+                        Random imagePosition = new Random();
+                        int position = imagePosition.nextInt(imageList.size());
+                        String str = "animal_image" + String.valueOf(position);
+                        setChoosen(imageList.get(position));
+
+                        showPhoto.setImageDrawable(
+                                getResources().getDrawable(getResourceID(str, "drawable", getApplicationContext())));
+
+                        talkedString = getChoosen().getDescription();
+
+                    }else{
+                        showText.setText("Você errou :(, tente novamente!");
                     }
                 }
             }

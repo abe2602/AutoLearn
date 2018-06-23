@@ -22,4 +22,11 @@
 
     <string name="contentImageAnimal">Imagem de um animal</string>
 
+    <string name="dangerText">Perigoso</string>
+    <string name="secureText">Seguro</string>
+
+    <string name="nextSeq">Próximo</string>
+    <string name="one">(Primeiro) 1</string>
+    <string name="two">(Segundo) 2</string>
+    <string name="third">(Terceiro) 3</string>
 </resources>
