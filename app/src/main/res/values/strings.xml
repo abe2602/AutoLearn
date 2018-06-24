@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">Mobile Trabalho</string>
+    <string name="app_name">AutoLearn</string>
+    <string name="app_title">Um app especial, para uma criança especial</string>
+
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+    <string name="back4app_app_id">siMGXanTdwCvEaLeyE2TosO9jUUNR5cKT7xgipcM</string>
+    <string name="back4app_client_key">T8YSlfwMMSiEl5KfVl8UasT13aLu2mEYbl4YM7db</string>
 
     <string name="sadButton">Tristeza</string>
     <string name="happyButton">Felicidade</string>
@@ -29,4 +34,13 @@
     <string name="one">(Primeiro) 1</string>
     <string name="two">(Segundo) 2</string>
     <string name="third">(Terceiro) 3</string>
+
+    <string name="signIn">Entrar</string>
+    <string name="signUp">Cadastre-se</string>
+    <string name="username">Usuário</string>
+    <string name="password">Senha</string>
+    <string name="text_email">Email</string>
+    <string name="text_save">Salvar</string>
+    <string name="text_cancel">Cancelar</string>
+    <string name="lembrarPass">Lebrar credenciais?</string>
 </resources>

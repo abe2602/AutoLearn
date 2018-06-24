@@ -4,12 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
-
-import com.example.abe.mobiletrabalho.camera.CameraActivity;
 import com.example.abe.mobiletrabalho.danger.DangerActivity;
-import com.example.abe.mobiletrabalho.Data.ImageClass;
-import com.example.abe.mobiletrabalho.Data.imageDatabase;
 import com.example.abe.mobiletrabalho.emotions.EmotionsActivity;
 import com.example.abe.mobiletrabalho.map.MapActivity;
 import com.example.abe.mobiletrabalho.mic.MicActivity;
@@ -46,11 +41,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void dangerOnClick(View view) {
         intent = new Intent(MainActivity.this, DangerActivity.class);
-        startActivity(intent);
-    }
-
-    public void cameraOnClick(View view) {
-        intent = new Intent(MainActivity.this, CameraActivity.class);
         startActivity(intent);
     }
 }
