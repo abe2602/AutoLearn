@@ -100,8 +100,9 @@ public class VibraActivity extends AppCompatActivity {
         if (check3) {
             music3.stop();
             music3.release();
-
         }
+
+        vibrate.cancel();
     }
     public void startMusicClick(View view) {
         if(check1 && auxCheck1){

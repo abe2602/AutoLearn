@@ -96,7 +96,7 @@ public class OrderActivity extends AppCompatActivity{
     }
 
     public void nextOnClickSeq(View view) {
-        if(curImage2 < maxIndice) {
+        if(curImage2 <= maxIndice) {
             curImage2 += 3;
             curImage1 = curImage2 - 1;
             curImage0 = curImage1 - 1;

@@ -17,6 +17,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
+        android:contentDescription="@string/contentImageAnimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,54 +26,53 @@
         android:id="@+id/angryButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="88dp"
-        android:text="@string/angryButton"
+        android:layout_marginBottom="8dp"
         android:background="@color/colorRed"
         android:onClick="checkRaiva"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:text="@string/angryButton"
+        app:layout_constraintBottom_toTopOf="@+id/afraidButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/disgustingButton"
+        app:layout_constraintVertical_bias="0.547" />
 
     <Button
         android:id="@+id/sadButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="28dp"
         android:background="@color/colorPrimary"
         android:onClick="checkTristeza"
         android:text="@string/sadButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/emotion_image_view" />
 
     <Button
         android:id="@+id/happyButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="376dp"
-        android:text="@string/happyButton"
+        android:layout_marginTop="24dp"
         android:background="@color/colorYellow"
         android:onClick="checkFelicidade"
+        android:text="@string/happyButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/sadButton" />
 
     <Button
         android:id="@+id/disgustingButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/disgustedButton"
-        android:onClick="checkNojo"
+        android:layout_marginTop="24dp"
         android:background="@color/colorGreen"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="checkNojo"
+        android:text="@string/disgustedButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.751" />
+        app:layout_constraintTop_toBottomOf="@+id/happyButton" />
 
     <Button
         android:id="@+id/afraidButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="24dp"
         android:background="@color/colorAccent"
         android:onClick="checkMedo"
         android:text="@string/afraidButton"

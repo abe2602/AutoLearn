@@ -45,4 +45,12 @@
     <string name="lembrarPass">Lebrar credenciais?</string>
 
     <string name="rendimento">Rendimento</string>
+    <string name="dangerName">Será perigoso?</string>
+    <string name="micName">Qual é esse animal?</string>
+    <string name="vibraName">Vamos relaxar!</string>
+    <string name="orderName">Ordem de eventos!</string>
+    <string name="emotionName">Qual é a emoção?</string>
+
+    <string name="imagemDescrible">Imagem</string>
+
 </resources>
