@@ -20,7 +20,7 @@ public class CadastroActivityTests {
             new IntentsTestRule<>(CadastroActivity.class);
 
     @Test
-    public void testSignIn() {
+    public void testCadastrar() {
         Espresso.onView(ViewMatchers.withId(R.id.username)).perform(ViewActions.clearText()).perform(ViewActions.typeText("user")).perform(ViewActions.closeSoftKeyboard());
         Espresso.onView(ViewMatchers.withId(R.id.email)).perform(ViewActions.clearText()).perform(ViewActions.typeText("email@email.com")).perform(ViewActions.closeSoftKeyboard());
         Espresso.onView(ViewMatchers.withId(R.id.password)).perform(ViewActions.typeText("password")).perform(ViewActions.closeSoftKeyboard());
@@ -34,7 +34,7 @@ public class CadastroActivityTests {
     }
 
     @Test
-    public void cancelsSignIn() {
+    public void cancelCadastrar() {
         Espresso.onView(ViewMatchers.withId(R.id.buttonCancelar)).perform(ViewActions.click());
         Intents.intended(IntentMatchers.hasComponent(LoginActivity.class.getName()));
     }
