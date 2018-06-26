@@ -10,19 +10,25 @@ import java.util.List;
 
 @Dao
 public interface DAOImage {
+    //Insere no banco
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void addImage(ImageClass image);
 
+    //Lista todas as imagens
     @Query("select * from imageclass")
     public List<ImageClass> getAllImages();
 
+    //Lista todas as imagens a partir do tipo
     @Query("select * from imageclass where type = :type")
     public List<ImageClass> getAllImagesByType(String type);
 
+    //Atualiza uma imagem o banco
     @Update(onConflict = OnConflictStrategy.REPLACE)
     void updateImage(ImageClass image);
 
-    //Pega todas as imagens por tipo, então, a partir do tipo e descrição (que é única na nossa base), adquirir o ID
+    //Deleta o banco todo
     @Query("delete from imageclass")
     void deleteAll();
 }
+
+

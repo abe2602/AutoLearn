@@ -6,12 +6,17 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.parse.Parse;
 import com.parse.ParseException;
+import com.parse.ParseInstallation;
+import com.parse.ParseObject;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
 
 public class CadastroActivity extends AppCompatActivity {
@@ -23,6 +28,11 @@ public class CadastroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
+        Parse.initialize(this);
+        ParseInstallation installation = ParseInstallation.getCurrentInstallation();
+        installation.put("GCMSenderId", "Your GCM Sender ID here");
+        installation.saveInBackground();
+
         usernameView = (EditText) findViewById(R.id.username);
         passwordView = (EditText) findViewById(R.id.password);
         passwordAgainView = (EditText) findViewById(R.id.passwordAgain);
@@ -63,7 +73,7 @@ public class CadastroActivity extends AppCompatActivity {
         validationErrorMessage.append(".");
 
         if (validationError) {
-            Toast.makeText(CadastroActivity.this, validationErrorMessage.toString(), Toast.LENGTH_LONG).show();
+          //  Toast.makeText(CadastroActivity.this, validationErrorMessage.toString(), Toast.LENGTH_LONG).show();
             return;
         }
 
@@ -82,17 +92,37 @@ public class CadastroActivity extends AppCompatActivity {
         ParseUser user = new ParseUser();
         user.setUsername(usernameView.getText().toString());
         user.setPassword(passwordView.getText().toString());
+
         user.signUpInBackground(new SignUpCallback() {
             @Override
             public void done(ParseException e) {
                 if (e == null) {
                     dlg.dismiss();
-                    alertDisplayer("Cadastrado com sucesso!");
+                    ParseObject entrance = new ParseObject("UserRating");
 
+                    entrance.put("userId", ParseUser.getCurrentUser().getObjectId());
+                    entrance.put("userName", usernameView.getText().toString());
+                    entrance.put("micEntrance", 0);
+                    entrance.put("emotionEntrance", 0);
+                    entrance.put("vibraEntrance", 0);
+                    entrance.put("orderEntrance", 0);
+                    entrance.put("dangerEntrance", 0);
+                    entrance.put("appEntrance", 1);
+                    entrance.saveInBackground(new SaveCallback() {
+                        @Override
+                        public void done(ParseException e) {
+                            if(e == null){
+                                Log.d("entrance", "deu bom");}
+                            else{
+                                Log.d("ruim", e.getMessage());
+                            }
+                        }
+                    });
+                    alertDisplayer("Cadastrado com sucesso!");
                 } else {
                     dlg.dismiss();
                     ParseUser.logOut();
-                    Toast.makeText(CadastroActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(CadastroActivity.this, "Não consegui cadastrar", Toast.LENGTH_LONG).show();
                 }
             }
         });

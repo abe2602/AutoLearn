@@ -31,10 +31,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".camera.CameraActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden" />
-        <activity
-            android:name=".map.MapActivity"
+            android:name=".order.OrderActivity"
             android:configChanges="orientation|screenSize|keyboardHidden" />
         <activity
             android:name=".danger.DangerActivity"
@@ -62,7 +59,13 @@
             android:name="com.parse.CLIENT_KEY"
             android:value="@string/back4app_client_key" />
 
-        <activity android:name=".CadastroActivity"></activity>
+        <activity android:name=".CadastroActivity" />
+
+        <service
+            android:name=".NotifyService"
+            android:enabled="true"
+            android:exported="true" />
+
     </application>
 
 </manifest>

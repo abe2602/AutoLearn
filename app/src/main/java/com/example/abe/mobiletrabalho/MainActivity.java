@@ -6,9 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import com.example.abe.mobiletrabalho.danger.DangerActivity;
 import com.example.abe.mobiletrabalho.emotions.EmotionsActivity;
-import com.example.abe.mobiletrabalho.map.MapActivity;
+import com.example.abe.mobiletrabalho.order.OrderActivity;
 import com.example.abe.mobiletrabalho.mic.MicActivity;
 import com.example.abe.mobiletrabalho.vibra.VibraActivity;
+import com.parse.ParseUser;
 
 public class MainActivity extends AppCompatActivity {
     private Intent intent;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        startService(new Intent(MainActivity.this, NotifyService.class));
     }
 
     public void vibraOnClick(View view) {
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void mapOnClick(View view) {
-        intent = new Intent(MainActivity.this, MapActivity.class);
+        intent = new Intent(MainActivity.this, OrderActivity.class);
         startActivity(intent);
     }
 
@@ -42,5 +44,12 @@ public class MainActivity extends AppCompatActivity {
     public void dangerOnClick(View view) {
         intent = new Intent(MainActivity.this, DangerActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+
+       // ParseUser.logOut();
     }
 }

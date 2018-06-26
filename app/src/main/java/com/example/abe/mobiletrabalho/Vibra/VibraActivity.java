@@ -7,12 +7,27 @@ import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TabHost;
 
 import com.example.abe.mobiletrabalho.R;
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseInstallation;
+import com.parse.ParseObject;
+import com.parse.ParsePush;
+import com.parse.ParseQuery;
+import com.parse.ParseUser;
+import com.parse.SaveCallback;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.LinkedList;
+import java.util.List;
 
 
 /*
@@ -31,7 +46,6 @@ public class VibraActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vibra);
-
         vibrate = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         auxCheck1 = true;
@@ -137,4 +151,6 @@ public class VibraActivity extends AppCompatActivity {
             auxCheck3 = true;
         }
     }
+
 }
+

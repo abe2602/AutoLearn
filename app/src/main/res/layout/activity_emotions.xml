@@ -37,9 +37,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="304dp"
-        android:text="@string/sadButton"
-        android:background="@color/colorBlue"
+        android:background="@color/colorPrimary"
         android:onClick="checkTristeza"
+        android:text="@string/sadButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -73,9 +73,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="@string/afraidButton"
+        android:background="@color/colorAccent"
         android:onClick="checkMedo"
-        android:background="@color/colorPurple"
+        android:text="@string/afraidButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

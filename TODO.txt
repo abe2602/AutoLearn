@@ -1,16 +1,1 @@
-Map:
-Ideia inicial foi mudada, a ideia agora é: não ter mais mapa.
-A ideia é que teremos várias imagens, que estão emaralhadas. A ideia é arruma-las.
-
-Camera:
-A ideia do tensor flow ainda está mandita.
-
-Danger:
-Várias imagens com placas/objetos perigosas aparecerão misturadas com objetos "normais".
-A ideia é que a criança selecione APENAS aqueles que são perigosos.
-
-Sistema de Login:
-Básico, mas ainda não implementado (usaremos o back4App).
-
-Sistema de rank:
-Pensando sobre.
+Mudar as strings dos botões

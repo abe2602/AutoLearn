@@ -43,4 +43,6 @@
     <string name="text_save">Salvar</string>
     <string name="text_cancel">Cancelar</string>
     <string name="lembrarPass">Lebrar credenciais?</string>
+
+    <string name="rendimento">Rendimento</string>
 </resources>

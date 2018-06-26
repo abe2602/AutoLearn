@@ -19,7 +19,6 @@ import java.util.Random;
 
 public class DangerAdapter extends RecyclerView.Adapter<DangerAdapter.DangerViewHolder> {
     private int numberItens;
-    private ImageView showPhoto;
     private List<ImageClass> imageList;
     private Context appContext;
     private Resources resource;
