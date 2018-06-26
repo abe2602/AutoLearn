@@ -52,6 +52,6 @@ public class LoginActivityTest {
     public void testLoginAttempt() {
         Espresso.onView(ViewMatchers.withId(R.id.editTextEmail)).perform(ViewActions.clearText()).perform(ViewActions.typeText("invaliduser"), ViewActions.closeSoftKeyboard());
         Espresso.onView(ViewMatchers.withId(R.id.editTextPassword)).perform(ViewActions.clearText()).perform(ViewActions.typeText("invalidpassword"), ViewActions.closeSoftKeyboard());
-        Espresso.onView(ViewMatchers.withId(R.id.buttonEntrar)).perform(ViewActions.clearText()).perform(ViewActions.click());
+        Espresso.onView(ViewMatchers.withId(R.id.buttonEntrar)).perform(ViewActions.click());
     }
 }

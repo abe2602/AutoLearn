@@ -18,6 +18,8 @@ import android.support.test.runner.AndroidJUnit4;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 
 import com.example.abe.mobiletrabalho.MainActivity;
+import com.example.abe.mobiletrabalho.order.OrderActivity;
+
 import static org.hamcrest.Matchers.not;
 
 import org.hamcrest.Matchers;
@@ -57,7 +59,7 @@ public class MainActivityTest {
     @Test
     public void launchesMapActivity() {
         Espresso.onView(ViewMatchers.withId(R.id.button_map)).perform(ViewActions.click());
-        Intents.intended(IntentMatchers.hasComponent(com.example.abe.mobiletrabalho.map.MapActivity.class.getName()));
+        Intents.intended(IntentMatchers.hasComponent(OrderActivity.class.getName()));
     }
 
     @Test
