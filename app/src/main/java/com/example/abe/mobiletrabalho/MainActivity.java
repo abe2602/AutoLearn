@@ -7,11 +7,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.abe.mobiletrabalho.danger.DangerActivity;
-import com.example.abe.mobiletrabalho.emotions.EmotionsActivity;
+import com.example.abe.mobiletrabalho.Emotion.EmotionActivity;
 import com.example.abe.mobiletrabalho.order.OrderActivity;
 import com.example.abe.mobiletrabalho.mic.MicActivity;
 import com.example.abe.mobiletrabalho.vibra.VibraActivity;
-import com.parse.ParseObject;
 import com.parse.ParseUser;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void emotionOnClick(View view) {
-        intent = new Intent(MainActivity.this, EmotionsActivity.class);
+        intent = new Intent(MainActivity.this, EmotionActivity.class);
         startActivity(intent);
     }
 

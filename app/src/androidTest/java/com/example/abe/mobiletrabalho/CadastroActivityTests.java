@@ -26,11 +26,6 @@ public class CadastroActivityTests {
         Espresso.onView(ViewMatchers.withId(R.id.password)).perform(ViewActions.typeText("password")).perform(ViewActions.closeSoftKeyboard());
         Espresso.onView(ViewMatchers.withId(R.id.passwordAgain)).perform(ViewActions.typeText("password")).perform(ViewActions.closeSoftKeyboard());
         Espresso.onView(ViewMatchers.withId(R.id.buttonCadastrar)).perform(ViewActions.click());
-
-        Espresso.onView(ViewMatchers.withId(16908759))
-                .inRoot(RootMatchers.isDialog())
-                .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-                .perform(ViewActions.click());
     }
 
     @Test

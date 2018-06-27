@@ -34,14 +34,6 @@ public class LoginActivityTest {
     public IntentsTestRule<LoginActivity> mActivityRule =
             new IntentsTestRule(LoginActivity.class);
 
-
-    @Before
-    public void stubAllExternalIntents() {
-        // By default Espresso Intents does not stub any Intents. Stubbing needs to be setup before
-        // every test run. In this case all external Intents will be blocked.
-        Intents.intending(Matchers.not(IntentMatchers.isInternal())).respondWith(new Instrumentation.ActivityResult(Activity.RESULT_OK, null));
-    }
-
     @Test
     public void launchesCadastroActivity() {
         Espresso.onView(ViewMatchers.withId(R.id.buttonCadastrar)).perform(ViewActions.click());

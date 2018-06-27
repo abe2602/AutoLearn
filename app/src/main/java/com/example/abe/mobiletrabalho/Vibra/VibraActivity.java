@@ -37,8 +37,8 @@ import java.util.List;
 * */
 public class VibraActivity extends AppCompatActivity {
     Switch on1, on2, on3;
-    MediaPlayer music1, music2, music3;
-    Vibrator vibrate;
+    public MediaPlayer music1, music2, music3;
+    public Vibrator vibrate;
     boolean check1, check2, check3;
     boolean auxCheck1, auxCheck2, auxCheck3;
 
