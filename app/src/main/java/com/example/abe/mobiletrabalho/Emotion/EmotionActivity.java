@@ -1,7 +1,7 @@
-package com.example.abe.mobiletrabalho.Emotions;
+package com.example.abe.mobiletrabalho.Emotion;
 
-import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,14 +16,19 @@ import com.example.abe.mobiletrabalho.R;
 import java.util.List;
 import java.util.Random;
 
-/*A ideia aqui é usar as emoções de Divertida mente,
-dentro dos botões.!!!*/
-public class EmotionsActivity extends AppCompatActivity {
+public class EmotionActivity extends AppCompatActivity {
     private List<ImageClass> imageList;
     private ImageView imageViewEmotions;
     private int position;
     private Button happy, sad, nojo, raiva, medo;
 
+    public String getImageDescription() {
+        return imageList.get(position).getDescription();
+    }
+
+    public List<ImageClass> getImageList() {
+        return imageList;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,85 +59,85 @@ public class EmotionsActivity extends AppCompatActivity {
     }
 
     public void populateDataBase(){
-       imageDatabase database = imageDatabase.getDatabase(getApplicationContext());
+        imageDatabase database = imageDatabase.getDatabase(getApplicationContext());
 
-       database.imageDao().deleteAll();
-       ImageClass insertedImage = new ImageClass("","","");
+        database.imageDao().deleteAll();
+        ImageClass insertedImage = new ImageClass("","","");
 
-       insertedImage.setType("emotion");
-       insertedImage.setDescription("alegria");
-       insertedImage.setName("emotion_image0");
-       database.imageDao().addImage(insertedImage);
+        insertedImage.setType("emotion");
+        insertedImage.setDescription("alegria");
+        insertedImage.setName("emotion_image0");
+        database.imageDao().addImage(insertedImage);
 
-       insertedImage.setType("emotion");
-       insertedImage.setDescription("alegria");
-       insertedImage.setName("emotion_image1");
-       database.imageDao().addImage(insertedImage);
+        insertedImage.setType("emotion");
+        insertedImage.setDescription("alegria");
+        insertedImage.setName("emotion_image1");
+        database.imageDao().addImage(insertedImage);
 
-       insertedImage.setType("emotion");
-       insertedImage.setDescription("alegria");
-       insertedImage.setName("emotion_image2");
-       database.imageDao().addImage(insertedImage);
+        insertedImage.setType("emotion");
+        insertedImage.setDescription("alegria");
+        insertedImage.setName("emotion_image2");
+        database.imageDao().addImage(insertedImage);
 
-       insertedImage.setType("emotion");
-       insertedImage.setDescription("medo");
-       insertedImage.setName("emotion_image3");
-       database.imageDao().addImage(insertedImage);
+        insertedImage.setType("emotion");
+        insertedImage.setDescription("medo");
+        insertedImage.setName("emotion_image3");
+        database.imageDao().addImage(insertedImage);
 
-       insertedImage.setType("emotion");
-       insertedImage.setDescription("medo");
-       insertedImage.setName("emotion_image4");
-       database.imageDao().addImage(insertedImage);
+        insertedImage.setType("emotion");
+        insertedImage.setDescription("medo");
+        insertedImage.setName("emotion_image4");
+        database.imageDao().addImage(insertedImage);
 
-       insertedImage.setType("emotion");
-       insertedImage.setDescription("medo");
-       insertedImage.setName("emotion_image5");
-       database.imageDao().addImage(insertedImage);
+        insertedImage.setType("emotion");
+        insertedImage.setDescription("medo");
+        insertedImage.setName("emotion_image5");
+        database.imageDao().addImage(insertedImage);
 
-       insertedImage.setType("emotion");
-       insertedImage.setDescription("nojo");
-       insertedImage.setName("emotion_image6");
-       database.imageDao().addImage(insertedImage);
+        insertedImage.setType("emotion");
+        insertedImage.setDescription("nojo");
+        insertedImage.setName("emotion_image6");
+        database.imageDao().addImage(insertedImage);
 
-       insertedImage.setType("emotion");
-       insertedImage.setDescription("nojo");
-       insertedImage.setName("emotion_image7");
-       database.imageDao().addImage(insertedImage);
+        insertedImage.setType("emotion");
+        insertedImage.setDescription("nojo");
+        insertedImage.setName("emotion_image7");
+        database.imageDao().addImage(insertedImage);
 
-       insertedImage.setType("emotion");
-       insertedImage.setDescription("nojo");
-       insertedImage.setName("emotion_image8");
-       database.imageDao().addImage(insertedImage);
+        insertedImage.setType("emotion");
+        insertedImage.setDescription("nojo");
+        insertedImage.setName("emotion_image8");
+        database.imageDao().addImage(insertedImage);
 
-       insertedImage.setType("emotion");
-       insertedImage.setDescription("raiva");
-       insertedImage.setName("emotion_image9");
-       database.imageDao().addImage(insertedImage);
+        insertedImage.setType("emotion");
+        insertedImage.setDescription("raiva");
+        insertedImage.setName("emotion_image9");
+        database.imageDao().addImage(insertedImage);
 
-       insertedImage.setType("emotion");
-       insertedImage.setDescription("raiva");
-       insertedImage.setName("emotion_image10");
-       database.imageDao().addImage(insertedImage);
+        insertedImage.setType("emotion");
+        insertedImage.setDescription("raiva");
+        insertedImage.setName("emotion_image10");
+        database.imageDao().addImage(insertedImage);
 
-       insertedImage.setType("emotion");
-       insertedImage.setDescription("raiva");
-       insertedImage.setName("emotion_image11");
-       database.imageDao().addImage(insertedImage);
+        insertedImage.setType("emotion");
+        insertedImage.setDescription("raiva");
+        insertedImage.setName("emotion_image11");
+        database.imageDao().addImage(insertedImage);
 
-       insertedImage.setType("emotion");
-       insertedImage.setDescription("tristeza");
-       insertedImage.setName("emotion_image12");
-       database.imageDao().addImage(insertedImage);
+        insertedImage.setType("emotion");
+        insertedImage.setDescription("tristeza");
+        insertedImage.setName("emotion_image12");
+        database.imageDao().addImage(insertedImage);
 
-       insertedImage.setType("emotion");
-       insertedImage.setDescription("tristeza");
-       insertedImage.setName("emotion_image13");
-       database.imageDao().addImage(insertedImage);
+        insertedImage.setType("emotion");
+        insertedImage.setDescription("tristeza");
+        insertedImage.setName("emotion_image13");
+        database.imageDao().addImage(insertedImage);
 
-       insertedImage.setType("emotion");
-       insertedImage.setDescription("tristeza");
-       insertedImage.setName("emotion_image14");
-       database.imageDao().addImage(insertedImage);
+        insertedImage.setType("emotion");
+        insertedImage.setDescription("tristeza");
+        insertedImage.setName("emotion_image14");
+        database.imageDao().addImage(insertedImage);
     }
 
     public void changeImage(){
@@ -155,7 +160,7 @@ public class EmotionsActivity extends AppCompatActivity {
             Log.d("Acertou", "raiva");
             changeImage();
         }else{
-            Toast.makeText(EmotionsActivity.this, "Você errou, tente novamente!",
+            Toast.makeText(EmotionActivity.this, "Você errou, tente novamente!",
                     Toast.LENGTH_SHORT).show();
 
             raiva.setEnabled(false);
@@ -164,10 +169,10 @@ public class EmotionsActivity extends AppCompatActivity {
 
     public void checkTristeza(View view) {
         if(imageList.get(position).getDescription().equals("tristeza")){
-         Log.d("Acertou", "tristeza");
-         changeImage();
+            Log.d("Acertou", "tristeza");
+            changeImage();
         }else{
-            Toast.makeText(EmotionsActivity.this, "Você errou, tente novamente!",
+            Toast.makeText(EmotionActivity.this, "Você errou, tente novamente!",
                     Toast.LENGTH_SHORT).show();
 
             sad.setEnabled(false);
@@ -179,7 +184,7 @@ public class EmotionsActivity extends AppCompatActivity {
             Log.d("Acertou", "felicidade");
             changeImage();
         }else{
-            Toast.makeText(EmotionsActivity.this, "Você errou, tente novamente!",
+            Toast.makeText(EmotionActivity.this, "Você errou, tente novamente!",
                     Toast.LENGTH_SHORT).show();
 
             happy.setEnabled(false);
@@ -191,7 +196,7 @@ public class EmotionsActivity extends AppCompatActivity {
             Log.d("Acertou", "nojo");
             changeImage();
         }else{
-            Toast.makeText(EmotionsActivity.this, "Você errou, tente novamente!",
+            Toast.makeText(EmotionActivity.this, "Você errou, tente novamente!",
                     Toast.LENGTH_SHORT).show();
 
             nojo.setEnabled(false);
@@ -203,7 +208,7 @@ public class EmotionsActivity extends AppCompatActivity {
             Log.d("Acertou", "medo");
             changeImage();
         }else{
-            Toast.makeText(EmotionsActivity.this, "Você errou, tente novamente!",
+            Toast.makeText(EmotionActivity.this, "Você errou, tente novamente!",
                     Toast.LENGTH_SHORT).show();
 
             medo.setEnabled(false);
