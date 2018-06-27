@@ -21,7 +21,7 @@ import org.junit.runner.RunWith;
 @RunWith(AndroidJUnit4.class)
 @LargeTest
 public class MainActivityTest {
-
+/*
     @Rule
     public IntentsTestRule<MainActivity> mActivityRule =
             new IntentsTestRule(MainActivity.class);
@@ -35,7 +35,7 @@ public class MainActivityTest {
     @Test
     public void launchesEmotionsActivity() {
         Espresso.onView(ViewMatchers.withId(R.id.imageViewEmotions)).perform(ViewActions.click());
-       // Intents.intended(IntentMatchers.hasComponent(com.example.abe.mobiletrabalho.emotions.EmotionsActivity.class.getName()));
+        Intents.intended(IntentMatchers.hasComponent(com.example.abe.mobiletrabalho.emotions.EmotionsActivity.class.getName()));
     }
 
     @Test
@@ -55,4 +55,5 @@ public class MainActivityTest {
         Espresso.onView(ViewMatchers.withId(R.id.imageViewVibra)).perform(ViewActions.click());
         Intents.intended(IntentMatchers.hasComponent(com.example.abe.mobiletrabalho.vibra.VibraActivity.class.getName()));
     }
+    */
 }
