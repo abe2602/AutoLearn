@@ -1,4 +1,4 @@
-package com.example.abe.mobiletrabalho.emotions;
+package com.example.abe.mobiletrabalho.Emotions;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;

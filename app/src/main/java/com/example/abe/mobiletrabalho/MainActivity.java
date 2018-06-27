@@ -7,11 +7,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.abe.mobiletrabalho.danger.DangerActivity;
-import com.example.abe.mobiletrabalho.emotions.EmotionsActivity;
+import com.example.abe.mobiletrabalho.Emotions.EmotionsActivity;
 import com.example.abe.mobiletrabalho.order.OrderActivity;
 import com.example.abe.mobiletrabalho.mic.MicActivity;
 import com.example.abe.mobiletrabalho.vibra.VibraActivity;
-import com.parse.ParseObject;
 import com.parse.ParseUser;
 
 public class MainActivity extends AppCompatActivity {
