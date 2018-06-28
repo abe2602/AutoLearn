@@ -1,6 +1,5 @@
 package com.example.abe.mobiletrabalho;
 
-import android.app.Activity;
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.action.ViewActions;
 import android.support.test.espresso.matcher.ViewMatchers;
@@ -8,7 +7,7 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.example.abe.mobiletrabalho.Data.ImageClass;
-import com.example.abe.mobiletrabalho.Emotion.EmotionActivity;
+import com.example.abe.mobiletrabalho.emotion.EmotionActivity;
 
 import org.junit.Rule;
 import org.junit.Test;

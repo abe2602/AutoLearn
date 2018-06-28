@@ -46,7 +46,7 @@
             android:name=".emotions.EmotionsActivity"
             android:configChanges="orientation|screenSize|keyboardHidden" />
         <activity
-            android:name=".Emotion.EmotionActivity"
+            android:name=".emotion.EmotionActivity"
             android:configChanges="orientation|screenSize|keyboardHidden" />
         <activity
             android:name=".MainActivity"
